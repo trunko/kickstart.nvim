@@ -19,7 +19,17 @@ return {
       explorer = { enabled = true },
       input = { enabled = true },
       lazygit = { enabled = true },
-      terminal = { enabled = true },
+      terminal = {
+        enabled = true,
+        win = {
+          keys = {
+            nav_h = { '<C-h>', '<C-\\><C-n><C-w>h', desc = 'Go to Left Window', expr = true, mode = 't' },
+            nav_j = { '<C-j>', '<C-\\><C-n><C-w>j', desc = 'Go to Lower Window', expr = true, mode = 't' },
+            nav_k = { '<C-k>', '<C-\\><C-n><C-w>k', desc = 'Go to Upper Window', expr = true, mode = 't' },
+            nav_l = { '<C-l>', '<C-\\><C-n><C-w>l', desc = 'Go to Right Window', expr = true, mode = 't' },
+          },
+        },
+      },
       notifier = {
         enabled = true,
         timeout = 3000,
@@ -385,7 +395,7 @@ return {
         function()
           Snacks.picker.lsp_type_definitions()
         end,
-        desc = 'Goto T[y]pe Definition',
+        desc = 'Goto Type Definition',
       },
       {
         '<leader>ss',
@@ -452,7 +462,7 @@ return {
         desc = 'Delete All Other Buffers',
       },
       {
-        '<leader>rf',
+        '<leader>cR',
         function()
           Snacks.rename.rename_file()
         end,
@@ -486,13 +496,6 @@ return {
           Snacks.terminal()
         end,
         desc = 'Toggle Terminal',
-      },
-      {
-        '<c-_>',
-        function()
-          Snacks.terminal()
-        end,
-        desc = 'which_key_ignore',
       },
       {
         ']]',

@@ -10,24 +10,24 @@ return {
 
       -- Document existing key chains
       spec = {
-        { '<leader>c', group = '[C]ode' },
-        { '<leader>d', group = '[D]ebug' },
-        { '<leader>f', group = '[F]ind' },
-        { '<leader>fs', group = '[S]ymbols' },
-        { '<leader>g', group = '[G]it' },
-        { '<leader>r', group = '[R]ename' },
-        { '<leader>s', group = '[S]earch' },
-        { '<leader>u', group = '[U]I' },
+        { '<leader>c', group = 'code' },
+        { '<leader>d', group = 'debug' },
+        { '<leader>f', group = 'find/file' },
+        { '<leader>fs', group = 'symbols' },
+        { '<leader>g', group = 'git' },
+        { '<leader>q', group = 'session' },
+        { '<leader>s', group = 'search' },
+        { '<leader>u', group = 'ui' },
         {
           '<leader>b',
-          group = '[B]uffer',
+          group = 'buffer',
           expand = function()
             return require('which-key.extras').expand.buf()
           end,
         },
         {
           '<leader>w',
-          group = '[W]indows',
+          group = 'windows',
           proxy = '<c-w>',
           expand = function()
             return require('which-key.extras').expand.win()
