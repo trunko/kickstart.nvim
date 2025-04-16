@@ -17,8 +17,6 @@ return {
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
 
-      require('mini.jump').setup()
-
       require('mini.move').setup()
 
       -- ... and there is more!
