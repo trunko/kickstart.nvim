@@ -16,7 +16,10 @@ return {
           { section = 'startup' },
         },
       },
-      explorer = { enabled = true },
+      explorer = {
+        enabled = true,
+        auto_close = true,
+      },
       input = { enabled = true },
       lazygit = { enabled = true },
       terminal = {
@@ -34,7 +37,14 @@ return {
         enabled = true,
         timeout = 3000,
       },
-      picker = { enabled = true },
+      picker = {
+        enabled = true,
+        sources = {
+          files = { hidden = true },
+          grep = { hidden = true },
+          explorer = { hidden = true },
+        },
+      },
       quickfile = { enabled = true },
       scope = { enabled = true },
       statuscolumn = { enabled = true },

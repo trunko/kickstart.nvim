@@ -17,6 +17,7 @@ return {
         fzf = true,
         grug_far = true,
         gitsigns = true,
+        harpoon = true,
         headlines = true,
         illuminate = true,
         indent_blankline = { enabled = true },
